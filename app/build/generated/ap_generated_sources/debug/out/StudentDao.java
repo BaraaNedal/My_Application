@@ -1,3 +1,4 @@
+import androidx.lifecycle.LiveData;
 import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
@@ -16,5 +17,5 @@ public interface StudentDao {
     void delete (Students students);
 
     @Query("Select * from Students")
-    List<Students> getAllStudents ();
+    LiveData<List<Students>> getAllStudents ();
 }
